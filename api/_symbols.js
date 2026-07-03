@@ -1,0 +1,151 @@
+// Comprehensive local symbol database used as a guaranteed search fallback
+// when live provider search is unavailable (e.g. cloud IP blocking).
+export const SYMBOLS = [
+  // Mega/large cap tech
+  { symbol: 'AAPL', name: 'Apple Inc.', type: 'EQUITY' },
+  { symbol: 'MSFT', name: 'Microsoft Corporation', type: 'EQUITY' },
+  { symbol: 'GOOGL', name: 'Alphabet Inc. Class A', type: 'EQUITY' },
+  { symbol: 'GOOG', name: 'Alphabet Inc. Class C', type: 'EQUITY' },
+  { symbol: 'AMZN', name: 'Amazon.com, Inc.', type: 'EQUITY' },
+  { symbol: 'NVDA', name: 'NVIDIA Corporation', type: 'EQUITY' },
+  { symbol: 'META', name: 'Meta Platforms, Inc.', type: 'EQUITY' },
+  { symbol: 'TSLA', name: 'Tesla, Inc.', type: 'EQUITY' },
+  { symbol: 'AVGO', name: 'Broadcom Inc.', type: 'EQUITY' },
+  { symbol: 'ORCL', name: 'Oracle Corporation', type: 'EQUITY' },
+  { symbol: 'CRM', name: 'Salesforce, Inc.', type: 'EQUITY' },
+  { symbol: 'AMD', name: 'Advanced Micro Devices, Inc.', type: 'EQUITY' },
+  { symbol: 'ADBE', name: 'Adobe Inc.', type: 'EQUITY' },
+  { symbol: 'CSCO', name: 'Cisco Systems, Inc.', type: 'EQUITY' },
+  { symbol: 'INTC', name: 'Intel Corporation', type: 'EQUITY' },
+  { symbol: 'QCOM', name: 'QUALCOMM Incorporated', type: 'EQUITY' },
+  { symbol: 'TXN', name: 'Texas Instruments Incorporated', type: 'EQUITY' },
+  { symbol: 'INTU', name: 'Intuit Inc.', type: 'EQUITY' },
+  { symbol: 'IBM', name: 'International Business Machines', type: 'EQUITY' },
+  { symbol: 'NFLX', name: 'Netflix, Inc.', type: 'EQUITY' },
+  { symbol: 'PLTR', name: 'Palantir Technologies Inc.', type: 'EQUITY' },
+  { symbol: 'SHOP', name: 'Shopify Inc.', type: 'EQUITY' },
+  { symbol: 'UBER', name: 'Uber Technologies, Inc.', type: 'EQUITY' },
+  { symbol: 'ABNB', name: 'Airbnb, Inc.', type: 'EQUITY' },
+  { symbol: 'SNAP', name: 'Snap Inc.', type: 'EQUITY' },
+  { symbol: 'RBLX', name: 'Roblox Corporation', type: 'EQUITY' },
+  { symbol: 'COIN', name: 'Coinbase Global, Inc.', type: 'EQUITY' },
+  { symbol: 'SOFI', name: 'SoFi Technologies, Inc.', type: 'EQUITY' },
+  { symbol: 'DKNG', name: 'DraftKings Inc.', type: 'EQUITY' },
+  { symbol: 'MU', name: 'Micron Technology, Inc.', type: 'EQUITY' },
+  { symbol: 'MRVL', name: 'Marvell Technology, Inc.', type: 'EQUITY' },
+  { symbol: 'SMCI', name: 'Super Micro Computer, Inc.', type: 'EQUITY' },
+  { symbol: 'ARM', name: 'Arm Holdings plc', type: 'EQUITY' },
+  { symbol: 'SNOW', name: 'Snowflake Inc.', type: 'EQUITY' },
+  { symbol: 'NOW', name: 'ServiceNow, Inc.', type: 'EQUITY' },
+  { symbol: 'PANW', name: 'Palo Alto Networks, Inc.', type: 'EQUITY' },
+  { symbol: 'CRWD', name: 'CrowdStrike Holdings, Inc.', type: 'EQUITY' },
+  // Financials
+  { symbol: 'JPM', name: 'JPMorgan Chase & Co.', type: 'EQUITY' },
+  { symbol: 'BAC', name: 'Bank of America Corporation', type: 'EQUITY' },
+  { symbol: 'WFC', name: 'Wells Fargo & Company', type: 'EQUITY' },
+  { symbol: 'GS', name: 'The Goldman Sachs Group, Inc.', type: 'EQUITY' },
+  { symbol: 'MS', name: 'Morgan Stanley', type: 'EQUITY' },
+  { symbol: 'V', name: 'Visa Inc.', type: 'EQUITY' },
+  { symbol: 'MA', name: 'Mastercard Incorporated', type: 'EQUITY' },
+  { symbol: 'PYPL', name: 'PayPal Holdings, Inc.', type: 'EQUITY' },
+  { symbol: 'AXP', name: 'American Express Company', type: 'EQUITY' },
+  { symbol: 'BRK-B', name: 'Berkshire Hathaway Inc. Class B', type: 'EQUITY' },
+  { symbol: 'BLK', name: 'BlackRock, Inc.', type: 'EQUITY' },
+  { symbol: 'C', name: 'Citigroup Inc.', type: 'EQUITY' },
+  // Healthcare
+  { symbol: 'JNJ', name: 'Johnson & Johnson', type: 'EQUITY' },
+  { symbol: 'UNH', name: 'UnitedHealth Group Incorporated', type: 'EQUITY' },
+  { symbol: 'LLY', name: 'Eli Lilly and Company', type: 'EQUITY' },
+  { symbol: 'ABBV', name: 'AbbVie Inc.', type: 'EQUITY' },
+  { symbol: 'MRK', name: 'Merck & Co., Inc.', type: 'EQUITY' },
+  { symbol: 'PFE', name: 'Pfizer Inc.', type: 'EQUITY' },
+  { symbol: 'TMO', name: 'Thermo Fisher Scientific Inc.', type: 'EQUITY' },
+  { symbol: 'MRNA', name: 'Moderna, Inc.', type: 'EQUITY' },
+  { symbol: 'ABT', name: 'Abbott Laboratories', type: 'EQUITY' },
+  // Consumer
+  { symbol: 'WMT', name: 'Walmart Inc.', type: 'EQUITY' },
+  { symbol: 'COST', name: 'Costco Wholesale Corporation', type: 'EQUITY' },
+  { symbol: 'PG', name: 'The Procter & Gamble Company', type: 'EQUITY' },
+  { symbol: 'KO', name: 'The Coca-Cola Company', type: 'EQUITY' },
+  { symbol: 'PEP', name: 'PepsiCo, Inc.', type: 'EQUITY' },
+  { symbol: 'MCD', name: "McDonald's Corporation", type: 'EQUITY' },
+  { symbol: 'NKE', name: 'NIKE, Inc.', type: 'EQUITY' },
+  { symbol: 'SBUX', name: 'Starbucks Corporation', type: 'EQUITY' },
+  { symbol: 'HD', name: 'The Home Depot, Inc.', type: 'EQUITY' },
+  { symbol: 'DIS', name: 'The Walt Disney Company', type: 'EQUITY' },
+  { symbol: 'F', name: 'Ford Motor Company', type: 'EQUITY' },
+  { symbol: 'GM', name: 'General Motors Company', type: 'EQUITY' },
+  { symbol: 'RIVN', name: 'Rivian Automotive, Inc.', type: 'EQUITY' },
+  { symbol: 'LCID', name: 'Lucid Group, Inc.', type: 'EQUITY' },
+  // Industrials/Energy/Telecom
+  { symbol: 'BA', name: 'The Boeing Company', type: 'EQUITY' },
+  { symbol: 'GE', name: 'GE Aerospace', type: 'EQUITY' },
+  { symbol: 'CAT', name: 'Caterpillar Inc.', type: 'EQUITY' },
+  { symbol: 'XOM', name: 'Exxon Mobil Corporation', type: 'EQUITY' },
+  { symbol: 'CVX', name: 'Chevron Corporation', type: 'EQUITY' },
+  { symbol: 'T', name: 'AT&T Inc.', type: 'EQUITY' },
+  { symbol: 'VZ', name: 'Verizon Communications Inc.', type: 'EQUITY' },
+  { symbol: 'ACN', name: 'Accenture plc', type: 'EQUITY' },
+  { symbol: 'LIN', name: 'Linde plc', type: 'EQUITY' },
+  // ETFs & Indices
+  { symbol: 'SPY', name: 'SPDR S&P 500 ETF Trust', type: 'ETF' },
+  { symbol: 'QQQ', name: 'Invesco QQQ Trust', type: 'ETF' },
+  { symbol: 'VOO', name: 'Vanguard S&P 500 ETF', type: 'ETF' },
+  { symbol: 'VTI', name: 'Vanguard Total Stock Market ETF', type: 'ETF' },
+  { symbol: 'IWM', name: 'iShares Russell 2000 ETF', type: 'ETF' },
+  { symbol: 'DIA', name: 'SPDR Dow Jones Industrial Average ETF', type: 'ETF' },
+  { symbol: 'ARKK', name: 'ARK Innovation ETF', type: 'ETF' },
+  { symbol: 'GLD', name: 'SPDR Gold Shares', type: 'ETF' },
+  { symbol: 'SLV', name: 'iShares Silver Trust', type: 'ETF' },
+  { symbol: 'XLK', name: 'Technology Select Sector SPDR Fund', type: 'ETF' },
+  { symbol: 'XLE', name: 'Energy Select Sector SPDR Fund', type: 'ETF' },
+  { symbol: 'XLF', name: 'Financial Select Sector SPDR Fund', type: 'ETF' },
+  { symbol: '^GSPC', name: 'S&P 500 Index', type: 'INDEX' },
+  { symbol: '^DJI', name: 'Dow Jones Industrial Average', type: 'INDEX' },
+  { symbol: '^IXIC', name: 'NASDAQ Composite', type: 'INDEX' },
+  { symbol: '^RUT', name: 'Russell 2000', type: 'INDEX' },
+  { symbol: '^VIX', name: 'CBOE Volatility Index', type: 'INDEX' },
+  { symbol: '^FTSE', name: 'FTSE 100', type: 'INDEX' },
+  { symbol: '^N225', name: 'Nikkei 225', type: 'INDEX' },
+  // Commodities & Forex
+  { symbol: 'GC=F', name: 'Gold Futures', type: 'COMMODITY' },
+  { symbol: 'SI=F', name: 'Silver Futures', type: 'COMMODITY' },
+  { symbol: 'CL=F', name: 'Crude Oil Futures', type: 'COMMODITY' },
+  { symbol: 'NG=F', name: 'Natural Gas Futures', type: 'COMMODITY' },
+  { symbol: 'HG=F', name: 'Copper Futures', type: 'COMMODITY' },
+  { symbol: 'EURUSD=X', name: 'EUR/USD', type: 'FOREX' },
+  { symbol: 'GBPUSD=X', name: 'GBP/USD', type: 'FOREX' },
+  { symbol: 'JPY=X', name: 'USD/JPY', type: 'FOREX' },
+  { symbol: 'USDCAD=X', name: 'USD/CAD', type: 'FOREX' },
+  { symbol: 'AUDUSD=X', name: 'AUD/USD', type: 'FOREX' },
+  // Crypto
+  { symbol: 'BTC-USD', name: 'Bitcoin USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'ETH-USD', name: 'Ethereum USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'SOL-USD', name: 'Solana USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'BNB-USD', name: 'BNB USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'XRP-USD', name: 'XRP USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'ADA-USD', name: 'Cardano USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'DOGE-USD', name: 'Dogecoin USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'AVAX-USD', name: 'Avalanche USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'LINK-USD', name: 'Chainlink USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'DOT-USD', name: 'Polkadot USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'MATIC-USD', name: 'Polygon USD', type: 'CRYPTOCURRENCY' },
+  { symbol: 'TRX-USD', name: 'TRON USD', type: 'CRYPTOCURRENCY' },
+];
+
+export function localSearch(q) {
+  const lower = q.toLowerCase().trim();
+  const scored = [];
+  for (const s of SYMBOLS) {
+    const sym = s.symbol.toLowerCase();
+    const name = s.name.toLowerCase();
+    let score = 0;
+    if (sym === lower) score = 100;
+    else if (sym.startsWith(lower)) score = 80;
+    else if (sym.includes(lower)) score = 60;
+    else if (name.startsWith(lower)) score = 50;
+    else if (name.includes(lower)) score = 30;
+    if (score > 0) scored.push({ ...s, score });
+  }
+  return scored.sort((a, b) => b.score - a.score).slice(0, 12).map(({ score, ...r }) => r);
+}

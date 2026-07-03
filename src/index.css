@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Mono', ui-monospace, monospace;
+  --color-bull: #16c784;
+  --color-bear: #ea3943;
+}
+
+@font-face { font-display: swap; }
+
+:root {
+  --bg: #f4f1ea;
+  --bg-card: #ffffff;
+  --ink: #0a0a0a;
+  --muted: #565248;
+  --border: #0a0a0a;
+  --accent: #ffde59;
+  --accent2: #4d61ff;
+  --accent3: #ff5c8a;
+  --grid: rgba(10,10,10,0.06);
+}
+
+.dark {
+  --bg: #0c0d10;
+  --bg-card: #16181d;
+  --ink: #f2f0e9;
+  --muted: #9a978d;
+  --border: #000000;
+  --accent: #ffde59;
+  --accent2: #6f83ff;
+  --accent3: #ff77a8;
+  --grid: rgba(255,255,255,0.05);
+}
+
+html, body, #root { height: 100%; }
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Archivo', 'Helvetica Neue', system-ui, sans-serif;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.font-mono2 { font-family: 'Space Mono', ui-monospace, monospace; }
+
+/* Neo-brutalist primitives */
+.nb {
+  background: var(--bg-card);
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+}
+.nb-sm { border: 2.5px solid var(--border); box-shadow: 4px 4px 0 var(--border); }
+.nb-hover { transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.nb-hover:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--border); }
+.nb-press:active { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--border); }
+
+.glass {
+  background: color-mix(in srgb, var(--bg-card) 70%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-muted { color: var(--muted); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border: 2px solid var(--bg); }
+
+@keyframes shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-card) 25%, color-mix(in srgb, var(--bg-card) 60%, #888 40%) 50%, var(--bg-card) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+.marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 40s linear infinite; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
