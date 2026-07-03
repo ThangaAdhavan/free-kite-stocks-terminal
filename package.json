@@ -20,7 +20,6 @@
     "react-router-dom": "^7.13.1",
     "tailwindcss": "^4.2.1"
   },
-  {
   "name": "free-kite-stocks-terminal",
   "private": true,
   "version": "0.0.0",
@@ -36,5 +35,4 @@
   },
   "dependencies": { ... keep as-is ... },
   "devDependencies": { ... keep as-is ... }
-}
 }
